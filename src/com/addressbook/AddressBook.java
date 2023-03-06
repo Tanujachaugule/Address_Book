@@ -165,4 +165,28 @@ public class AddressBook {
         return addressBook;
 
     }
+
+    public void newAddressBook() {
+    }
+
+    public void openAddressBook() {
+    }
+
+    public void searchPerson() {
+    }
+
+    public void displayAddressBook() {
+    }
+
+    public void display() {
+    }
+
+    public void deletePerson() {
+    }
+
+    public void editPerson() {
+    }
+
+    public void addPerson() {
+    }
 }
