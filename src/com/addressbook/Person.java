@@ -50,4 +50,8 @@ public class Person {
     public Object getCity() {
         return null;
     }
+
+    public boolean getZip() {
+        return false;
+    }
 }
