@@ -1,13 +1,19 @@
 package com.addressbook;
-import java.util.*;
-public class AddressBook {
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.util.ArrayList;
+import java.util.Scanner;
+public class FileIO {
     public static void main(String [] args) {
 
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("Welcome to Address Book Program");
         AddressBook addressbook = new AddressBook();
-
         int answer=1;
         while (answer == 1) {
             System.out.println("Select any option for Address Book Operation");
@@ -16,7 +22,6 @@ public class AddressBook {
                     + "\n3. Display AddressBook"
                     + "\n4. Quit");
             int choice =scanner.nextInt();
-
             switch(choice) {
                 case 1 :
                     addressbook.newAddressBook();
@@ -35,7 +40,11 @@ public class AddressBook {
                                 + "\n6. Search by city and state"
                                 + "\n7. Count by City"
                                 + "\n8. Count by State"
-                                + "\n9. Quit");
+                                + "\n9. Sort by first name"
+                                + "\n10. Sort by City"
+                                + "\n11. Sort by State"
+                                + "\n12. Sort by Zip"
+                                + "\n13. Quit");
                         int value = scanner.nextInt();
 
                         switch (value) {
@@ -64,10 +73,22 @@ public class AddressBook {
                                 addressbook.countByState();
                                 break;
                             case 9 :
+                                addressbook.sortContactListByFirstName();
+                                break;
+                            case 10 :
+                                addressbook.sortContactListByCity();
+                                break;
+                            case 11 :
+                                addressbook.sortContactListByState();
+                                break;
+                            case 12 :
+                                addressbook.sortContactListByZip();
+                                break;
+                            case 13 :
                                 input = 0;
                                 break;
                             default :
-                                System.out.println("Incorrect Choice" + "\nEnter a number between 1 and 8");
+                                System.out.println("Incorrect Choice" + "\nEnter a number between 1 and 13");
                         }
                     }
                     break;
@@ -82,50 +103,5 @@ public class AddressBook {
             }
         }
     }
-
-    void openAddressBook() {
-    }
-
-    void newAddressBook() {
-    }
-
-    void searchPerson() {
-    }
-
-    void addPerson() {
-    }
-
-    void editPerson() {
-    }
-
-    void deletePerson() {
-        
-    }
-
-    void display() {
-    }
-
-    void searchByCityOrState() {
-    }
-
-    void countByCity() {
-    }
-
-    void countByState() {
-    }
-
-    void displayAddressBook() {
-    }
-
-    public void sortContactListByCity() {
-    }
-
-    public void sortContactListByFirstName() {
-    }
-
-    public void sortContactListByState() {
-    }
-
-    public void sortContactListByZip() {
-    }
 }
+

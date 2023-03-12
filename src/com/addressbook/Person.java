@@ -54,4 +54,8 @@ public class Person {
     public boolean getZip() {
         return false;
     }
+
+    public char[] getPhoneNumber() {
+        return new char[0];
+    }
 }
